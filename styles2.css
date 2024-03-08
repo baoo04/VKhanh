@@ -93,3 +93,20 @@ p {
 .suki {
     color: #C5728E;
 }
+
+@media screen and (max-width: 450px) {
+    .letter-container {
+        width: 100%;
+    }
+    .letter {
+        width: 100%;
+    }
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        color: orange;
+        margin-top: 20px;
+    }
+    
+}
