@@ -1,0 +1,95 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background: url('./assets/img/download1.jpg');
+}
+
+/* Space background */
+.space-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.stars, .twinkling, .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes move-twink-back {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+@keyframes move-clouds-back {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 0; }
+}
+
+/* Letter container */
+.letter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.letter {
+    background-color: #F0B7B6;
+    padding: 20px;
+    border-radius: 10px;
+    background: url('./assets/img/nen.jpg');
+}
+
+#thank-you-letter {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+#redirect-button {
+    background-color: #EFB0AC; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px; 
+    margin: 4px 2px;
+    transition-duration: 0.4s; 
+    cursor: pointer;
+    border-radius: 12px; 
+}
+
+#redirect-button:hover {
+    background-color: #DF8183;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #AE773C;
+}
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.suki {
+    color: #C5728E;
+}
