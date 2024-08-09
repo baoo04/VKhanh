@@ -1,112 +1,100 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    background: url('./assets/img/download1.jpg');
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+  background-color: #ffebee;
+  position: relative;
+  height: 100vh;
+  background: url(assets/img/tinhyeuuuu2.jpg);
 }
 
-/* Space background */
-.space-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.stars, .twinkling, .clouds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-@keyframes move-twink-back {
-    from { background-position: 0 0; }
-    to { background-position: -10000px 5000px; }
-}
-
-@keyframes move-clouds-back {
-    from { background-position: 0 0; }
-    to { background-position: -10000px 0; }
-}
-
-/* Letter container */
 .letter-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 .letter {
-    background-color: #F0B7B6;
-    padding: 20px;
-    border-radius: 10px;
-    background: url('./assets/img/nen.jpg');
-}
-
-#thank-you-letter {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
+  background-color: #df8183;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #redirect-button {
-    background-color: #EFB0AC; 
-    border: none; 
-    color: white; 
-    padding: 15px 32px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block;
-    font-size: 16px; 
-    margin: 4px 2px;
-    transition-duration: 0.4s; 
-    cursor: pointer;
-    border-radius: 12px; 
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  z-index: 10;
 }
 
 #redirect-button:hover {
-    background-color: #DF8183;
+  background-color: #c2185b;
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #AE773C;
+.heart {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-color: #e91e63;
+  transform: rotate(45deg);
+  animation: float 7s infinite ease-in-out;
+  z-index: 1;
+  opacity: 0.8;
 }
-p {
-    margin-bottom: 20px;
-    line-height: 1.6;
+
+.heart:before,
+.heart:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #e91e63;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -7.5px;
+  left: 0;
+}
+
+.heart:after {
+  left: 7.5px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-800px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.hilu {
+    color: orange;
 }
 
 .suki {
-    color: #C5728E;
+    color: #c2185b;
 }
 
-@media screen and (max-width: 450px) {
-    .letter-container {
-        width: 100%;
-    }
-    .letter {
-        width: 100%;
-    }
-    body {
-        font-size: 12px;
-    }
-    h1 {
-        color: orange;
-        margin-top: 20px;
-    }
-    
+.baongao {
+    color: white;
 }
